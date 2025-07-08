@@ -187,7 +187,12 @@
                   games, audio tales, and PDFs in Urdu. It blends fun and values to provide a safe and engaging
                   experience for children.
                 </p>
+                <button id="openGalleryBtn"
+                  class="mt-2 inline-block text-center bg-[#314d68] text-[#e5e7eb] px-4 py-2 rounded hover:bg-[#3e5c78] transition-colors duration-200">
+                  View Gallery
+                </button>
               </div>
+
             </div>
           </section>
 
@@ -202,7 +207,7 @@
               <div
                 class="flex flex-col gap-4 rounded-lg border border-[#314d68] bg-[#182734] p-4 hover:bg-[#2a3949] transition-all duration-300 shadow-lg">
                 <img src="assets/images/Roadmate.jpeg" alt="Roadmate App"
-                  class="rounded-lg w-full object-cover max-h-[400px] transition-transform duration-300 hover:scale-105" />
+                  class="rounded-lg w-full object-contain max-h-[400px] transition-transform duration-300 hover:scale-105" />
                 <h3 class="text-[#e5e7eb] text-xl font-bold">Roadmate</h3>
                 <ul class="text-[#e5e7eb] text-base list-disc pl-5">
                   <li>Complete UI Design</li>
@@ -222,8 +227,8 @@
               <!-- TODO Mobile App -->
               <div
                 class="flex flex-col gap-4 rounded-lg border border-[#314d68] bg-[#182734] p-4 hover:bg-[#2a3949] transition-all duration-300 shadow-lg">
-                <img src="assets/images/TodoApp.jpeg" alt="TODO Mobile App"
-                  class="rounded-lg w-full object-cover max-h-[400px] transition-transform duration-300 hover:scale-105" />
+                <img src="assets/images/mytodo.jpeg" alt="TODO Mobile App"
+                  class="rounded-lg w-full object-contain max-h-[400px] transition-transform duration-300 hover:scale-105" />
                 <h3 class="text-[#e5e7eb] text-xl font-bold">TODO Mobile App</h3>
                 <ul class="text-[#e5e7eb] text-base list-disc pl-5">
                   <li>Complete UI Design</li>
@@ -243,8 +248,8 @@
               <!-- Ecommerce Application -->
               <div
                 class="flex flex-col gap-4 rounded-lg border border-[#314d68] bg-[#182734] p-4 hover:bg-[#2a3949] transition-all duration-300 shadow-lg">
-                <img src="assets/images/EcommerceApp.jpeg" alt="Ecommerce Application"
-                  class="rounded-lg w-full object-cover max-h-[400px] transition-transform duration-300 hover:scale-105" />
+                <img src="assets/images/ecommerce.jpeg" alt="Ecommerce Application"
+                  class="rounded-lg w-full object-contain max-h-[400px] transition-transform duration-300 hover:scale-105" />
                 <h3 class="text-[#e5e7eb] text-xl font-bold">Ecommerce Application</h3>
                 <ul class="text-[#e5e7eb] text-base list-disc pl-5">
                   <li>Complete UI Design</li>
@@ -263,6 +268,29 @@
 
 
 
+          <!-- Gallery Modal -->
+          <div id="galleryModal"
+            class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+            <div
+              class="relative bg-[#182734] border border-[#314d68] rounded-lg p-4 max-w-3xl w-full mx-4 overflow-y-auto max-h-[90vh]">
+              <!-- Close Button -->
+              <button id="closeGalleryBtn"
+                class="absolute top-2 right-2 text-[#e5e7eb] text-3xl font-bold hover:text-[#ccc]">&times;</button>
+
+              <h3 class="text-[#e5e7eb] text-2xl font-bold mb-4 text-center">StoryMation Gallery</h3>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <img src="assets/images/Screens/Screen1.jpeg" alt="StoryMation Screen 1"
+                  class="rounded-lg w-full object-contain max-h-[600px]" />
+                <img src="assets/images/Screens/Screen2.jpeg" alt="StoryMation Screen 2"
+                  class="rounded-lg w-full object-contain max-h-[600px]" />
+                <img src="assets/images/Screens/Screen3.jpeg" alt="StoryMation Screen 3"
+                  class="rounded-lg w-full object-contain max-h-[600px]" />
+                <img src="assets/images/Screens/Screen4.jpeg" alt="StoryMation Screen 4"
+                  class="rounded-lg w-full object-contain max-h-[600px]" />
+              </div>
+            </div>
+          </div>
 
 
 
@@ -388,6 +416,32 @@
         document.getElementById(id).classList.add('active');
       });
     });
+
+
+
+
+
+
+    const openBtn = document.getElementById('openGalleryBtn');
+    const closeBtn = document.getElementById('closeGalleryBtn');
+    const modal = document.getElementById('galleryModal');
+
+    openBtn.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+    });
+
+    // Optional: close on outside click
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+      }
+    });
+
+
   </script>
 
 

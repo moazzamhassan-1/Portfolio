@@ -58,7 +58,9 @@ nav a:hover {
     color: white !important;
 }
 
-
+ #galleryModal::-webkit-scrollbar {
+    display: none;
+  }
 
 .contact_input{
     background-color: rgb(216 216 216);
