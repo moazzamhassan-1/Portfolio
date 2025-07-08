@@ -1,0 +1,65 @@
+body {
+    /* background-image: url(assests/images/body_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: dimgrey;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+    box-shadow: rgb(255 255 255 / 55%) 0px -5px 16px, rgb(255 255 255 / 0%) 0px 1px 0px inset;
+}
+
+
+nav a{
+    padding: 3px;
+}
+
+nav a:hover {
+    border-top: 1px solid #c9dcec;
+    border-bottom: 1px solid #c9dcec;
+    /* box-shadow: 0px 2px 37px -5px #616161; */
+    /* background-color: #9f9f9f00; */
+}
+
+/* .tab p {
+    color: #9eafbd;
+} */
+
+/* .active-tab p {
+    color: white;
+} */
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+
+.tab {
+    border-bottom-color: transparent;
+}
+
+.tab .tab-text {
+    color: #cadcff;
+}
+
+.active-tab {
+    border-bottom-color: #cadcff !important;
+}
+
+.active-tab .tab-text {
+    color: white !important;
+}
+
+
+
+.contact_input{
+    background-color: rgb(216 216 216);
+}
